@@ -1,0 +1,14 @@
+@use "sass:map";
+
+.page {
+  padding: 0;
+  margin: 0 auto;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: map.get($displaySize, 'mobile' );
+  max-width: map.get($displaySize, 'desktop');
+  font-family: 'Noto Sans', Arial, sans-serif;
+  color: $white;
+
+
+}

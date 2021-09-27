@@ -1,2 +1,30 @@
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../vendors/fonts/notosans.woff") format("woff"), url("../vendors/fonts/notosans.woff2") format("woff2");
+}
+.body {
+  background-color: #000;
+}
 
-/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
+.page {
+  padding: 0;
+  margin: 0 auto;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 320px;
+  max-width: 1440px;
+  font-family: "Noto Sans", Arial, sans-serif;
+  color: #fff;
+}
+
+.header {
+  padding: 0 20px 20px;
+}
+
+.team {
+  background-color: #5036e6;
+}
+
+.footer {
+  background-color: #5036e6;
+}/*# sourceMappingURL=style.css.map */
