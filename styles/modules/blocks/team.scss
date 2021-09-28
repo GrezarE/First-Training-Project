@@ -1,3 +1,43 @@
+@use "sass:map";
+
 .team {
   background-color: $secondBackground;
+  @include flex;
+  @include reset-brouser;
+  padding-bottom: 40px;
+  &__header {
+    max-width: map.get($elementSize, "mobile");
+    @include reset-brouser;
+    @include fontHeaderSmall;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &__text {
+    @include reset-brouser;
+    max-width: map.get($elementSize, "mobile");
+    padding-bottom: 60px;
+  }
+  &__persons {
+    @include reset-brouser;
+    list-style: none;
+    max-width: map.get($elementSize, "mobile");
+    padding-bottom: 30px
+  }
+  &__person {
+    @include flex;
+  }
+  &__photo {
+    max-width: map.get($elementSize, "mobile");
+  }
+  &__name {
+    @include reset-brouser;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+  &__occupation {
+    @include reset-brouser;
+    padding-bottom: 30px;
+  }
+  // &__slide {
+  // }
 }
