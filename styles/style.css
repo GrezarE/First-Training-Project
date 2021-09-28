@@ -1,3 +1,4 @@
+@import url(../vendors/normalize.css);
 @font-face {
   font-family: "Noto Sans";
   src: url("../vendors/fonts/notosans.woff") format("woff"), url("../vendors/fonts/notosans.woff2") format("woff2");
@@ -11,14 +12,99 @@
   margin: 0 auto;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  min-width: 320px;
   max-width: 1440px;
   font-family: "Noto Sans", Arial, sans-serif;
   color: #fff;
 }
 
 .header {
-  padding: 0 20px 20px;
+  width: 87.5%;
+  height: 152px;
+  padding: 19px 6.25% 31px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 16px;
+  width: 26px;
+  height: 36px;
+  background-image: url(../images/figure.svg);
+}
+.header::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  background-image: url(../images/mobile-header-back.svg);
+  top: 92px;
+  right: 20px;
+}
+.header__button {
+  width: 140px;
+  height: 30px;
+  background-color: #009465;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  font-size: 10px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #fff;
+  align-self: end;
+}
+.header__club {
+  width: 63px;
+  height: 40px;
+  background-color: #5036e6;
+  text-align: center;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 50px 50px 0;
+  margin-bottom: 29px;
+}
+.header__club-text {
+  font-size: 12px;
+  line-height: 10.8px;
+}
+
+.title {
+  width: 87.5%;
+  padding: 0 6.25% 6.25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title__header {
+  max-width: 280px;
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  line-height: 36px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+.title__subtitle {
+  max-width: 280px;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 15.6px;
+  font-weight: 400;
+  padding-bottom: 110px;
+}
+.title__image {
+  max-width: 280px;
 }
 
 .team {
