@@ -1,0 +1,23 @@
+.invite {
+  background-color: $secondBackground;
+  @include reset-brouser;
+  @include flex;
+
+  background-image: url(../images/mobile-team-back.svg);
+  background-size: 87.5%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  &__header {
+    @include reset-brouser;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    @include font($size: 40px, $height: 36px, $weight: 600);
+  }
+  &__text {
+    @include reset-brouser;
+    padding-left: 20px;
+    padding-bottom: 200px;
+    @include font($size: 12px, $height: 15.6px);
+  }
+}

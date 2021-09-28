@@ -1,0 +1,30 @@
+@mixin reset-brouser {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin screenSize($size: 320px) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin flex($align: center, $justify: center, $direction: column) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin font($size: 20px, $height: 26px, $weight: 400, $spacing: 0, $color: $white) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  letter-spacing: $spacing;
+  color: $color;
+}
+
+@mixin wh($w, $h) {
+  width: $w;
+  height: $h;
+}

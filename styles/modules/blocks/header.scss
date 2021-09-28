@@ -1,3 +1,45 @@
 .header {
-  padding: 0 20px 20px;
+  width: 87.5%;
+  height: 152px;
+  padding: 19px 6.25% 31px;
+  position: relative;
+  @include flex($justify: space-between);
+  &::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    @include wh($w: 26px, $h: 36px);
+    background-image: url(../images/figure.svg);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    @include wh($w: 120px, $h: 60px);
+    background-image: url(../images/mobile-header-back.svg);
+    top: 92px;
+    right: 20px;
+  }
+  &__button {
+    @include wh($w: 140px, $h: 30px);
+    background-color: $lightGreen;
+    @include reset-brouser;
+    border: 0;
+    border-radius: 8px;
+    @include font($size: 10px, $height: 18px, $weight: 600, $spacing: 0.01em);
+    align-self: end;
+  }
+  &__club {
+    @include wh($w: 63px, $h: 40px);
+    background-color: $secondBackground;
+    text-align: center;
+    align-self: start;
+    @include flex;
+    border-radius: 0 50px 50px 0;
+    margin-bottom: 29px;
+  }
+  &__club-text {
+    @include font($size: 12px, $height: 10.8px, $weight: 500);
+  }
 }
+

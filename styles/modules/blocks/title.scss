@@ -1,0 +1,26 @@
+@use "sass:map";
+
+.title {
+  width: 87.5%;
+  padding: 0 6.25% 6.25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    max-width: map.get($elementSize, "mobile");
+    @include reset-brouser;
+    @include font($size: 40px, $height: 36px, $weight: 600);
+    padding-bottom: 20px;
+  }
+  &__subtitle {
+    max-width: map.get($elementSize, "mobile");
+    @include reset-brouser;
+    @include font($size: 12px, $height: 15.6px);
+
+    padding-bottom: 110px;
+  }
+  &__image {
+    max-width: map.get($elementSize, "mobile");
+  }
+}

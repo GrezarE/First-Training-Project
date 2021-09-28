@@ -2,24 +2,95 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <title>Правильные шахматы</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./vendors/swiper-bundle.min.css" />
+
+  <title>Правильные шахматы</title>
 
 </head>
 
 <body class="body">
   <div class="page">
-    <header class="header">1</header>
+    <header class="header">
+      <button class="header__button">Зарегистрироваться</button>
+      <div class="header__club">
+        <p class="header__club-text">КЛУБ</p>
+      </div>
+    </header>
     <main class="main">
-      <section class="team">2</section>
-      <section class="battle">3</section>
-    </main>
-    <footer class="footer">4</footer>
-  </div>
+      <section class="title">
+        <h1 class="title__header">Правильные шахматы</h1>
+        <p class="title__subtitle">Приходите к нам, играть в шахматы! Сразитесь классическом поединке, блиц состязании и
+          бою с гройсмейстером. </p>
+        <img src="./images/board.svg" alt="шашечки" class="title__image">
+      </section>
+      <section class="team">
+        <h2 class="team__header">Наша команда</h2>
+        <p class="team__text">Лучшие шахматисты и шахматистки любители России, гройсмейстеры, с ними играть — одно
+          удовольствие!</p>
+        <div class="team__cards swiper mySwiper">
+          <ul class="team__persons swiper-wrapper">
+            <li class="team__person swiper-slide">
+              <img src="./images/photo-first.png" alt="фото" class="team__photo">
+              <h3 class="team__name">АНДРЕЙ</h3>
+              <p class="team__occupation">Шахматист, писатель.</p>
+            </li>
+            <li class="team__person swiper-slide">
+              <img src="./images/photo-second.png" alt="фото" class="team__photo">
+              <h3 class="team__name">Никита</h3>
+              <p class="team__occupation">Шахматист, кулинар.</p>
+            </li>
+            <li class="team__person swiper-slide">
+              <img src="./images/photo-third.png" alt="фото" class="team__photo">
+              <h3 class="team__name">АЛЕКСЕЙ</h3>
+              <p class="team__occupation">Шахматист, геймер.</p>
+            </li>
+          </ul>
+          <div class="team__slide swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="invite">
+        <h2 class="invite__header">Хочешь в&nbsp;комаду?</h2>
+        <p class="invite__text">Свяжись с нами и мы обсудим все детали присоеденения к команде.</p>
+      </section>
+      <section class="battle">
+        <h2 class="battle__header">Сражения</h2>
+        <p class="battle__text">Сражайтесь в парах и приятно проводите время. Если хотите прокачать свои навыки —
+          сыграйте с нашими шахматистами.</p>
+        <div class="battle__cards swiper mySwiper">
+          <ul class="battle__photo-box swiper-wrapper">
+            <li class="battle__photo swiper-slide">
+              <img src="./images/battle-one.png" alt="Шахматы на скамейке" class="battle__img">
+            </li>
+            <li class="battle__photo swiper-slide">
+              <img src="./images/battle-two.png" alt="Шахматный турнип" class="battle__img">
 
+            </li>
+            <li class="battle__photo swiper-slide">
+              <img src="./images/battle-three.png" alt="Шахматы на песке" class="battle__img">
+
+            </li>
+          </ul>
+          <div class="battle__slide swiper-pagination"></div>
+
+        </div>
+        <img src="./images/green-board.svg" alt="шашечки" class="battle__image">
+
+      </section>
+    </main>
+    <!-- <footer class="footer">4</footer> -->
+  </div>
+  <script src="./vendors/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 </body>
 
 </html>
