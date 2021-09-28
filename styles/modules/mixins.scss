@@ -3,20 +3,8 @@
   padding: 0;
 }
 
-@mixin desktopSize {
-  @media (min-width: 1440px) {
-    @content;
-  }
-}
-
-@mixin tabletSize {
-  @media (min-width: 768px) {
-    @content;
-  }
-}
-
-@mixin mobileSize {
-  @media (min-width: 320px) {
+@mixin screenSize($size: 320px) {
+  @media (min-width: $size) {
     @content;
   }
 }
@@ -28,50 +16,12 @@
   justify-content: $justify;
 }
 
-@mixin fontHeaderLarge {
-  font-size: 70px;
-  line-height: 63px;
-  font-weight: 600;
-}
-
-@mixin fontHeaderSmall {
-  font-size: 40px;
-  line-height: 36px;
-  font-weight: 600;
-}
-
-@mixin fontTextSmall {
-  font-size: 12px;
-  line-height: 15.6px;
-  font-weight: 400;
-}
-
-@mixin fontTextLarge {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 400;
-}
-
-@mixin fontButtonMobile {
-  font-size: 10px;
-  line-height: 18px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  color: $white;
-}
-
-@mixin fontButtonTablet {
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-
-@mixin fontButtonDesktop {
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+@mixin font($size: 20px, $height: 26px, $weight: 400, $spacing: 0, $color: $white) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  letter-spacing: $spacing;
+  color: $color;
 }
 
 @mixin wh($w, $h) {

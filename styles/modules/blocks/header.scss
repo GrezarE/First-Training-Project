@@ -3,7 +3,7 @@
   height: 152px;
   padding: 19px 6.25% 31px;
   position: relative;
-  @include flex($justify: space-between, );
+  @include flex($justify: space-between);
   &::before {
     content: "";
     position: absolute;
@@ -26,7 +26,7 @@
     @include reset-brouser;
     border: 0;
     border-radius: 8px;
-    @include fontButtonMobile;
+    @include font($size: 10px, $height: 18px, $weight: 600, $spacing: 0.01em);
     align-self: end;
   }
   &__club {
@@ -39,8 +39,7 @@
     margin-bottom: 29px;
   }
   &__club-text {
-    font-size: 12px;
-    line-height: 10.8px;
-
+    @include font($size: 12px, $height: 10.8px, $weight: 500);
   }
 }
+

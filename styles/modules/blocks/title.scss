@@ -10,15 +10,15 @@
   &__header {
     max-width: map.get($elementSize, "mobile");
     @include reset-brouser;
-    @include fontHeaderSmall;
+    @include font($size: 40px, $height: 36px, $weight: 600);
     padding-bottom: 20px;
   }
   &__subtitle {
     max-width: map.get($elementSize, "mobile");
     @include reset-brouser;
-    @include fontTextSmall;
-    padding-bottom: 110px;
+    @include font($size: 12px, $height: 15.6px);
 
+    padding-bottom: 110px;
   }
   &__image {
     max-width: map.get($elementSize, "mobile");

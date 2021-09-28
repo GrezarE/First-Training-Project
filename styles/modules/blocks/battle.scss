@@ -1,7 +1,6 @@
 @use "sass:map";
 
-.team {
-  background-color: $secondBackground;
+.battle {
   @include flex;
   @include reset-brouser;
   padding-bottom: 30px;
@@ -9,9 +8,11 @@
     max-width: map.get($elementSize, "mobile");
     @include reset-brouser;
     @include font($size: 40px, $height: 36px, $weight: 600);
-
-    padding-top: 23px;
+    text-align: start;
+    padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 20px;
+    align-self: flex-start
   }
   &__text {
     @include reset-brouser;
@@ -19,34 +20,20 @@
     max-width: map.get($elementSize, "mobile");
     padding-bottom: 60px;
   }
-  &__cards {
-    padding-bottom: 20px
-  }
-  &__persons {
+  &__photo-box {
     @include reset-brouser;
     list-style: none;
     max-width: map.get($elementSize, "mobile");
-    // padding-bottom: 30px
-  }
-  &__person {
-    @include flex;
   }
   &__photo {
     max-width: map.get($elementSize, "mobile");
   }
-  &__name {
-    @include reset-brouser;
-    padding-top: 20px;
-    padding-bottom: 5px;
-    @include font($size: 18px, $height: 23.4px,$spacing: 0.055em);
-    text-align: center;
-    text-transform: uppercase;
-  }
-  &__occupation {
-    @include reset-brouser;
+  &__img {
+    max-width: map.get($elementSize, "mobile");
     padding-bottom: 30px;
-    @include font($size: 12px, $height: 15.6px);
-    text-align: center;
-
+  }
+  &__image {
+    padding-bottom: 20px;
+    padding-top: 50px;
   }
 }
