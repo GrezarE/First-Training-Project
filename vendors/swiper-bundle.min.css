@@ -300,7 +300,7 @@
   height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
   display: inline-block;
   border-radius: 50%;
-  background: var(--swiper-pagination-bullet-inactive-color, #000);
+  background: var(--swiper-pagination-bullet-inactive-color, #fff);
   opacity: var(--swiper-pagination-bullet-inactive-opacity, .2)
 }
 

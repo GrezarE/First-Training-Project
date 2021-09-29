@@ -1,0 +1,68 @@
+@use "sass:map";
+
+.popup {
+  @include wh($w: 100%, $h: 100vh);
+  margin: 0 auto;
+  display: grid;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s linear;
+  z-index: 2;
+  &::before {
+    content: "";
+    background-color: $black;
+    background-size: cover;
+    opacity: 1;
+    @include wh($w: 100vh, $h: 100vh);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__image {
+    @include wh($w: 26px, $h: 36px);
+  }
+  &__form {
+    position: relative;
+    z-index: 3;
+    width: 280px;
+    @include flex;
+    margin: 0 auto;
+  }
+  &__title {
+    @include reset-brouser;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &__box {
+    @include flex;
+  }
+  &__registration {
+    @include flex;
+    @include reset-brouser;
+    padding-bottom: 143px;
+    border: unset;
+    gap: 10px;
+  }
+  &__item {
+    @include reset-brouser;
+    border-radius: 8px;
+    border: 0;
+    @include font($size: 12px, $height: 18px, $spacing: 0.01em);
+    width: 262px;
+    padding-left: 18px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: $darkBlack;
+  }
+  &__button {
+  }
+  &_opened {
+    visibility: visible;
+    opacity: 1;
+  }
+}

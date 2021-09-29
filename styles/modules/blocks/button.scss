@@ -1,0 +1,26 @@
+.button {
+  position: relative;
+  @include wh($w: 140px, $h: 30px);
+  background-color: $lightGreen;
+  @include reset-brouser;
+  border: 0;
+  border-radius: 8px;
+  @include font($size: 10px, $height: 18px, $weight: 600, $spacing: 0.01em);
+  cursor: pointer;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include wh($w: 0, $h: 100%);
+    border: 0;
+    border-radius: 8px;
+    background-color: $darkGreen;
+    transition: all 0.3s ease;
+    z-index: -1;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+}
