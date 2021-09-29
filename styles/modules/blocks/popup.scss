@@ -18,7 +18,7 @@
     background-color: $black;
     background-size: cover;
     opacity: 1;
-    @include wh($w: 100vh, $h: 100vh);
+    @include wh($w: 100%, $h: 100vh);
     position: absolute;
     top: 0;
     left: 0;
@@ -58,6 +58,12 @@
     padding-top: 12px;
     padding-bottom: 12px;
     background-color: $darkBlack;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $lightBlack;
+
+    }
   }
   &__button {
   }

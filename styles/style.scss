@@ -2,10 +2,11 @@
 @import '../vendors/fonts.scss';
 @import './modules/variables.scss';
 @import './modules/mixins.scss';
+@import './modules/blocks/button.scss';
 @import './modules/blocks/body.scss';
 @import './modules/blocks/page.scss';
-@import './modules/blocks/button.scss';
 @import './modules/blocks/header.scss';
+// title remove
 @import './modules/blocks/title.scss';
 @import './modules/blocks/team.scss';
 @import './modules/blocks/invite.scss';

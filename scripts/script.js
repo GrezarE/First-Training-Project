@@ -32,3 +32,5 @@ headerButton.addEventListener('click', function () {openPopup(popupModale)});
 footerButton.addEventListener('click', function () {openPopup(popupModale)});
 
 
+const width = document.documentElement.clientWidth
+console.log(width)

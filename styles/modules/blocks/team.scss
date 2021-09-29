@@ -20,25 +20,26 @@
     padding-bottom: 60px;
   }
   &__cards {
-    padding-bottom: 20px
+    padding-bottom: 20px;
   }
   &__persons {
     @include reset-brouser;
     list-style: none;
     max-width: map.get($elementSize, "mobile");
-    // padding-bottom: 30px
+    margin-right: 28px;
   }
   &__person {
     @include flex;
   }
   &__photo {
     max-width: map.get($elementSize, "mobile");
+    // margin-right: 28px;
   }
   &__name {
     @include reset-brouser;
     padding-top: 20px;
     padding-bottom: 5px;
-    @include font($size: 18px, $height: 23.4px,$spacing: 0.055em);
+    @include font($size: 18px, $height: 23.4px, $spacing: 0.055em);
     text-align: center;
     text-transform: uppercase;
   }
@@ -47,6 +48,16 @@
     padding-bottom: 30px;
     @include font($size: 12px, $height: 15.6px);
     text-align: center;
+  }
+  &__slide {
+    @include screenSize($size: 768px) {
+      display: none;
+    }
+  }
+}
 
+.swiper {
+  @include screenSize($size: 768px) {
+    overflow: unset;
   }
 }

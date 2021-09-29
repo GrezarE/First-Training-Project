@@ -1,9 +1,20 @@
+@use "sass:map";
+
 .header {
   width: 87.5%;
-  height: 152px;
   padding: 19px 6.25% 31px;
   position: relative;
   @include flex($justify: space-between);
+  @include screenSize($size: 768px) {
+    padding-left: 6.5%;
+    padding-right: 6.5%;
+    padding-top: 30px;
+    width: 87%;
+    @include screenSize($size: 768px) {
+      display: grid;
+      grid-template-columns: 484px 184px;
+    }
+  }
   &::before {
     content: "";
     position: absolute;
@@ -11,6 +22,13 @@
     top: 16px;
     @include wh($w: 26px, $h: 36px);
     background-image: url(../images/figure.svg);
+    @include screenSize($size: 768px) {
+      top: 26px;
+      left: 50px;
+      @include wh($w: 38px, $h: 54px);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
   &::after {
     content: "";
@@ -19,9 +37,20 @@
     background-image: url(../images/mobile-header-back.svg);
     top: 92px;
     right: 20px;
+    @include screenSize($size: 768px) {
+      @include wh($w: 130px, $h: 520px);
+      background-image: url(../images/tablet-header-back.svg);
+      top: 300px;
+      right: 0;
+    }
   }
   &__button {
     align-self: end;
+    @include screenSize($size: 768px) {
+      grid-column-start: 2;
+      font-size: 13px;
+      @include wh($w: 184px, $h: 44px);
+    }
   }
   &__club {
     @include wh($w: 63px, $h: 40px);
@@ -31,8 +60,68 @@
     @include flex;
     border-radius: 0 50px 50px 0;
     margin-bottom: 29px;
+    margin-top: 60px;
+    @include screenSize($size: 768px) {
+      grid-column-start: 1;
+      @include wh($w: 84px, $h: 50px);
+      margin-top: 66px;
+      margin-bottom: 70px;
+    }
   }
   &__club-text {
+    @include reset-brouser;
     @include font($size: 12px, $height: 10.8px, $weight: 500);
+    @include screenSize($size: 768px) {
+      grid-column-start: 1;
+      font-size: 16px;
+      line-height: 90%;
+    }
+  }
+  &__title {
+    max-width: map.get($elementSize, "mobile");
+    @include reset-brouser;
+    @include font($size: 40px, $height: 36px, $weight: 600);
+    padding-bottom: 20px;
+    @include screenSize($size: 768px) {
+      grid-column-start: 1;
+      font-size: 70px;
+      line-height: 90%;
+      padding-bottom: 40px;
+max-width: 500px;
+    }
+  }
+  &__subtitle {
+    max-width: map.get($elementSize, "mobile");
+    @include reset-brouser;
+    @include font($size: 12px, $height: 15.6px);
+    padding-bottom: 110px;
+    @include screenSize($size: 768px) {
+      grid-column-start: 1;
+      font-size: 20px;
+      line-height: 130%;
+      padding-bottom: 212px;
+      max-width: 500px;
+
+    }
+  }
+  &__image {
+    max-width: map.get($elementSize, "mobile");
+    @include screenSize($size: 768px) {
+      grid-column-start: 1;
+      max-width: 416px;
+    }
+  }
+  &__invite {
+    display: none;
+    @include reset-brouser;
+    @include font($size: 13px, $height: 16.25px, $spacing: 0.01em);
+    @include screenSize($size: 768px) {
+      display: block;
+      justify-self: end;
+      padding-right: 30px;
+    }
+  }
+  &__arrow {
+    margin-left: 10px;
   }
 }

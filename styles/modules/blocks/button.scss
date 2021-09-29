@@ -8,6 +8,11 @@
   @include font($size: 10px, $height: 18px, $weight: 600, $spacing: 0.01em);
   cursor: pointer;
   z-index: 1;
+  @include screenSize($size: 768px) {
+    font-size: 15px;
+    @include wh($w: 218px, $h: 48px);
+
+  }
   &::before {
     content: "";
     position: absolute;
