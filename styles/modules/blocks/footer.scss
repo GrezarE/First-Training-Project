@@ -1,3 +1,32 @@
 .footer {
+  @include reset-brouser;
+  @include flex;
   background-color: $secondBackground;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: center;
+    top: 40px;
+    @include wh($w: 38px, $h: 54px);
+    background-image: url(../images/figure.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__button {
+    margin-top: 134px;
+    margin-bottom: 40px
+  }
+  &__header {
+    @include reset-brouser;
+    @include font($size: 12px, $height: 15.6px, $weight: 400);
+    text-align: center;
+    padding-bottom: 10px
+  }
+  &__coopyright {
+    @include reset-brouser;
+    @include font($size: 12px, $height: 12px, $weight: 400, $color: $gray);
+    text-align: center;
+    padding-bottom: 40px;
+  }
 }
