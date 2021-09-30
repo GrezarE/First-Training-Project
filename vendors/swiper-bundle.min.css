@@ -32,6 +32,13 @@
   z-index: 1
 }
 
+@media (min-width: 768px) {
+  .swiper {
+    overflow: unset;
+  }
+
+}
+
 .swiper-vertical>.swiper-wrapper {
   flex-direction: column
 }

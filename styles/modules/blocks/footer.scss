@@ -12,21 +12,36 @@
     background-image: url(../images/figure.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    @include screenSize($size: 768px) {
+    }
   }
   &__button {
     margin-top: 134px;
-    margin-bottom: 40px
+    margin-bottom: 40px;
+    @include screenSize($size: 768px) {
+      margin-top: 194px;
+      margin-bottom: 60px;
+    }
   }
   &__header {
     @include reset-brouser;
-    @include font($size: 12px, $height: 15.6px, $weight: 400);
+    @include font($size: 12px, $height: 130%, $weight: 400);
     text-align: center;
-    padding-bottom: 10px
+    padding-bottom: 10px;
+    @include screenSize($size: 768px) {
+      font-size: 20px;
+      padding-bottom: 20px;
+    }
   }
   &__coopyright {
     @include reset-brouser;
     @include font($size: 12px, $height: 12px, $weight: 400, $color: $gray);
     text-align: center;
     padding-bottom: 40px;
+    @include screenSize($size: 768px) {
+      font-size: 15.1px;
+      line-height: 20px;
+      padding-bottom: 80px;
+    }
   }
 }

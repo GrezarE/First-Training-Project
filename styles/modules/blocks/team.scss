@@ -5,59 +5,91 @@
   @include flex;
   @include reset-brouser;
   padding-bottom: 30px;
+  @include screenSize($size: 768px) {
+    align-items: flex-start;
+    padding-left: 50px;
+    overflow: hidden;
+  }
+
   &__header {
     max-width: map.get($elementSize, "mobile");
     @include reset-brouser;
-    @include font($size: 40px, $height: 36px, $weight: 600);
-
+    @include font($size: 40px, $height: 90%, $weight: 600);
     padding-top: 23px;
     padding-bottom: 20px;
+    @include screenSize($size: 768px) {
+      font-size: 70px;
+      max-width: 668px;
+      padding-top: 50px;
+      padding-bottom: 40px;
+    }
   }
   &__text {
     @include reset-brouser;
-    @include font($size: 12px, $height: 15.6px);
+    @include font($size: 12px, $height: 130%);
     max-width: map.get($elementSize, "mobile");
     padding-bottom: 60px;
+    @include screenSize($size: 768px) {
+      font-size: 20px;
+      max-width: map.get($elementSize, "tablet");
+      padding-bottom: 140px;
+    }
   }
   &__cards {
     padding-bottom: 20px;
+    @include screenSize($size: 768px) {
+      margin-left: unset;
+    }
   }
   &__persons {
     @include reset-brouser;
     list-style: none;
     max-width: map.get($elementSize, "mobile");
     margin-right: 28px;
+    @include screenSize($size: 768px) {
+      max-width: map.get($elementSize, "photo");
+    }
   }
   &__person {
     @include flex;
+    @include screenSize($size: 768px) {
+    align-items: flex-start;
+    }
   }
   &__photo {
     max-width: map.get($elementSize, "mobile");
     // margin-right: 28px;
+    @include screenSize($size: 768px) {
+      max-width: map.get($elementSize, "photo");
+    }
   }
   &__name {
     @include reset-brouser;
     padding-top: 20px;
     padding-bottom: 5px;
-    @include font($size: 18px, $height: 23.4px, $spacing: 0.055em);
-    text-align: center;
+    @include font($size: 18px, $height: 130%, $spacing: 0.055em);
+    // text-align: center;
     text-transform: uppercase;
+    @include screenSize($size: 768px) {
+    font-size: 22px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    }
   }
   &__occupation {
     @include reset-brouser;
     padding-bottom: 30px;
-    @include font($size: 12px, $height: 15.6px);
-    text-align: center;
+    @include font($size: 12px, $height: 130%);
+    // text-align: center;
+    @include screenSize($size: 768px) {
+      font-size: 20px;
+      padding-bottom: 50px;
+
+    }
   }
   &__slide {
     @include screenSize($size: 768px) {
       display: none;
     }
-  }
-}
-
-.swiper {
-  @include screenSize($size: 768px) {
-    overflow: unset;
   }
 }
