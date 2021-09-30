@@ -2,7 +2,7 @@
 
 .header {
   width: 87.5%;
-  padding: 19px 6.25% 31px;
+  padding: 19px 6.25% 20px;
   position: relative;
   @include flex($justify: space-between);
   @include screenSize($size: 768px) {
@@ -59,8 +59,8 @@
     align-self: start;
     @include flex;
     border-radius: 0 50px 50px 0;
-    margin-bottom: 29px;
-    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-top: 53px;
     @include screenSize($size: 768px) {
       grid-column-start: 1;
       @include wh($w: 84px, $h: 50px);

@@ -4,6 +4,16 @@
   @include flex;
   @include reset-brouser;
   padding-bottom: 30px;
+  @include screenSize($size: 768px) {
+    align-items: flex-start;
+    padding-left: 50px;
+    background-image: url(../images/tablet-battle-back.svg);
+    background-position: left bottom;
+    background-size: 220px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+  }
   &__header {
     max-width: map.get($elementSize, "mobile");
     @include reset-brouser;
@@ -16,27 +26,66 @@
     @include screenSize($size: 350px) {
       align-self: center;
     }
+    @include screenSize($size: 768px) {
+      font-size: 70px;
+      padding-bottom: 40px;
+      padding-top: 50px;
+      align-self: flex-start;
+      padding-left: 0;
+    }
   }
   &__text {
     @include reset-brouser;
-    @include font($size: 12px, $height: 15.6px);
+    @include font($size: 12px, $height: 130%);
     max-width: map.get($elementSize, "mobile");
     padding-bottom: 60px;
+    @include screenSize($size: 768px) {
+      font-size: 20px;
+      max-width: map.get($elementSize, "tablet");
+      padding-bottom: 140px;
+    }
+  }
+  &__cards {
+    @include screenSize($size: 768px) {
+      margin-left: unset;
+    }
   }
   &__photo-box {
     @include reset-brouser;
     list-style: none;
     max-width: map.get($elementSize, "mobile");
+    @include screenSize($size: 768px) {
+      max-width: map.get($elementSize, "photo");
+    }
   }
   &__photo {
+    margin-right: 28px;
+
     max-width: map.get($elementSize, "mobile");
+    @include screenSize($size: 768px) {
+      max-width: map.get($elementSize, "photo");
+    }
   }
   &__img {
     max-width: map.get($elementSize, "mobile");
+    @include screenSize($size: 768px) {
+      max-width: map.get($elementSize, "photo");
+    }
     padding-bottom: 30px;
   }
   &__image {
     padding-bottom: 20px;
     padding-top: 50px;
+    @include screenSize($size: 768px) {
+      align-self: flex-end;
+      padding-right: 50px;
+      padding-top: 140px;
+
+    }
+  }
+  &__slide {
+    @include screenSize($size: 768px) {
+      display: none;
+    }
   }
 }

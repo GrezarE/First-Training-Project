@@ -60,7 +60,7 @@
 
 .header {
   width: 87.5%;
-  padding: 19px 6.25% 31px;
+  padding: 19px 6.25% 20px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -140,8 +140,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 0 50px 50px 0;
-  margin-bottom: 29px;
-  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-top: 53px;
 }
 @media (min-width: 768px) {
   .header__club {
@@ -281,31 +281,58 @@
   padding: 0;
   padding-bottom: 30px;
 }
+@media (min-width: 768px) {
+  .team {
+    align-items: flex-start;
+    padding-left: 50px;
+    overflow: hidden;
+  }
+}
 .team__header {
   max-width: 280px;
   margin: 0;
   padding: 0;
   font-size: 40px;
-  line-height: 36px;
+  line-height: 90%;
   font-weight: 600;
   letter-spacing: 0;
   color: #fff;
   padding-top: 23px;
   padding-bottom: 20px;
 }
+@media (min-width: 768px) {
+  .team__header {
+    font-size: 70px;
+    max-width: 668px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+}
 .team__text {
   margin: 0;
   padding: 0;
   font-size: 12px;
-  line-height: 15.6px;
+  line-height: 130%;
   font-weight: 400;
   letter-spacing: 0;
   color: #fff;
   max-width: 280px;
   padding-bottom: 60px;
 }
+@media (min-width: 768px) {
+  .team__text {
+    font-size: 20px;
+    max-width: 500px;
+    padding-bottom: 140px;
+  }
+}
 .team__cards {
   padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .team__cards {
+    margin-left: unset;
+  }
 }
 .team__persons {
   margin: 0;
@@ -314,14 +341,29 @@
   max-width: 280px;
   margin-right: 28px;
 }
+@media (min-width: 768px) {
+  .team__persons {
+    max-width: 320px;
+  }
+}
 .team__person {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 768px) {
+  .team__person {
+    align-items: flex-start;
+  }
+}
 .team__photo {
   max-width: 280px;
+}
+@media (min-width: 768px) {
+  .team__photo {
+    max-width: 320px;
+  }
 }
 .team__name {
   margin: 0;
@@ -329,33 +371,38 @@
   padding-top: 20px;
   padding-bottom: 5px;
   font-size: 18px;
-  line-height: 23.4px;
+  line-height: 130%;
   font-weight: 400;
   letter-spacing: 0.055em;
   color: #fff;
-  text-align: center;
   text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .team__name {
+    font-size: 22px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
 }
 .team__occupation {
   margin: 0;
   padding: 0;
   padding-bottom: 30px;
   font-size: 12px;
-  line-height: 15.6px;
+  line-height: 130%;
   font-weight: 400;
   letter-spacing: 0;
   color: #fff;
-  text-align: center;
+}
+@media (min-width: 768px) {
+  .team__occupation {
+    font-size: 20px;
+    padding-bottom: 50px;
+  }
 }
 @media (min-width: 768px) {
   .team__slide {
     display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .swiper {
-    overflow: unset;
   }
 }
 
@@ -368,9 +415,16 @@
   align-items: center;
   justify-content: center;
   background-image: url(../images/mobile-team-back.svg);
-  background-size: 87.5%;
+  background-size: 280px;
   background-repeat: no-repeat;
   background-position: center bottom;
+}
+@media (min-width: 768px) {
+  .invite {
+    background-image: url(../images/tablet-team-back.svg);
+    background-position: left center;
+    background-size: 180px;
+  }
 }
 .invite__header {
   margin: 0;
@@ -379,10 +433,19 @@
   padding-bottom: 20px;
   padding-left: 20px;
   font-size: 40px;
-  line-height: 36px;
+  line-height: 90%;
   font-weight: 600;
   letter-spacing: 0;
   color: #fff;
+}
+@media (min-width: 768px) {
+  .invite__header {
+    max-width: 478px;
+    font-size: 70px;
+    padding-top: 121px;
+    padding-bottom: 40px;
+    padding-left: 240px;
+  }
 }
 .invite__text {
   margin: 0;
@@ -390,10 +453,18 @@
   padding-left: 20px;
   padding-bottom: 200px;
   font-size: 12px;
-  line-height: 15.6px;
+  line-height: 130%;
   font-weight: 400;
   letter-spacing: 0;
   color: #fff;
+}
+@media (min-width: 768px) {
+  .invite__text {
+    max-width: 478px;
+    font-size: 20px;
+    padding-left: 240px;
+    padding-bottom: 121px;
+  }
 }
 
 .battle {
@@ -404,6 +475,17 @@
   margin: 0;
   padding: 0;
   padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .battle {
+    align-items: flex-start;
+    padding-left: 50px;
+    background-image: url(../images/tablet-battle-back.svg);
+    background-position: left bottom;
+    background-size: 220px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
 }
 .battle__header {
   max-width: 280px;
@@ -425,16 +507,37 @@
     align-self: center;
   }
 }
+@media (min-width: 768px) {
+  .battle__header {
+    font-size: 70px;
+    padding-bottom: 40px;
+    padding-top: 50px;
+    align-self: flex-start;
+    padding-left: 0;
+  }
+}
 .battle__text {
   margin: 0;
   padding: 0;
   font-size: 12px;
-  line-height: 15.6px;
+  line-height: 130%;
   font-weight: 400;
   letter-spacing: 0;
   color: #fff;
   max-width: 280px;
   padding-bottom: 60px;
+}
+@media (min-width: 768px) {
+  .battle__text {
+    font-size: 20px;
+    max-width: 500px;
+    padding-bottom: 140px;
+  }
+}
+@media (min-width: 768px) {
+  .battle__cards {
+    margin-left: unset;
+  }
 }
 .battle__photo-box {
   margin: 0;
@@ -442,16 +545,44 @@
   list-style: none;
   max-width: 280px;
 }
+@media (min-width: 768px) {
+  .battle__photo-box {
+    max-width: 320px;
+  }
+}
 .battle__photo {
+  margin-right: 28px;
   max-width: 280px;
+}
+@media (min-width: 768px) {
+  .battle__photo {
+    max-width: 320px;
+  }
 }
 .battle__img {
   max-width: 280px;
   padding-bottom: 30px;
 }
+@media (min-width: 768px) {
+  .battle__img {
+    max-width: 320px;
+  }
+}
 .battle__image {
   padding-bottom: 20px;
   padding-top: 50px;
+}
+@media (min-width: 768px) {
+  .battle__image {
+    align-self: flex-end;
+    padding-right: 50px;
+    padding-top: 140px;
+  }
+}
+@media (min-width: 768px) {
+  .battle__slide {
+    display: none;
+  }
 }
 
 .footer {
@@ -479,16 +610,28 @@
   margin-top: 134px;
   margin-bottom: 40px;
 }
+@media (min-width: 768px) {
+  .footer__button {
+    margin-top: 194px;
+    margin-bottom: 60px;
+  }
+}
 .footer__header {
   margin: 0;
   padding: 0;
   font-size: 12px;
-  line-height: 15.6px;
+  line-height: 130%;
   font-weight: 400;
   letter-spacing: 0;
   color: #fff;
   text-align: center;
   padding-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .footer__header {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
 }
 .footer__coopyright {
   margin: 0;
@@ -500,6 +643,13 @@
   color: #8E9199;
   text-align: center;
   padding-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .footer__coopyright {
+    font-size: 15.1px;
+    line-height: 20px;
+    padding-bottom: 80px;
+  }
 }
 
 .popup {

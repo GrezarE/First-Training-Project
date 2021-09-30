@@ -4,20 +4,41 @@
   @include flex;
 
   background-image: url(../images/mobile-team-back.svg);
-  background-size: 87.5%;
+  // background-size: 87.5%;
+  background-size: 280px;
+
   background-repeat: no-repeat;
   background-position: center bottom;
+  @include screenSize($size: 768px) {
+    background-image: url(../images/tablet-team-back.svg);
+    background-position: left center;
+    background-size: 180px;
+  }
   &__header {
     @include reset-brouser;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
-    @include font($size: 40px, $height: 36px, $weight: 600);
+    @include font($size: 40px, $height: 90%, $weight: 600);
+    @include screenSize($size: 768px) {
+      max-width: 478px;
+      font-size: 70px;
+      padding-top: 121px;
+      padding-bottom: 40px;
+      padding-left: 240px;
+    }
   }
   &__text {
     @include reset-brouser;
     padding-left: 20px;
     padding-bottom: 200px;
-    @include font($size: 12px, $height: 15.6px);
+    @include font($size: 12px, $height: 130%);
+    @include screenSize($size: 768px) {
+      max-width: 478px;
+
+      font-size: 20px;
+      padding-left: 240px;
+      padding-bottom: 121px;
+    }
   }
 }
