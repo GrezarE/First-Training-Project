@@ -12,7 +12,13 @@
     background-size: 220px;
     background-repeat: no-repeat;
     overflow: hidden;
+    @include screenSize($size: 1440px) {
+      padding-left: 160px;
+      background-image: url(../images/desktop-battle-back.svg);
+      background-position: 100px bottom;
+      background-size: 440px;
 
+    }
   }
   &__header {
     max-width: map.get($elementSize, "mobile");
@@ -33,6 +39,9 @@
       align-self: flex-start;
       padding-left: 0;
     }
+    @include screenSize($size: 1440px) {
+      padding-top: 80px;
+    }
   }
   &__text {
     @include reset-brouser;
@@ -43,6 +52,9 @@
       font-size: 20px;
       max-width: map.get($elementSize, "tablet");
       padding-bottom: 140px;
+    }
+    @include screenSize($size: 1440px) {
+      padding-bottom: 110px;
     }
   }
   &__cards {
@@ -60,10 +72,12 @@
   }
   &__photo {
     margin-right: 28px;
-
     max-width: map.get($elementSize, "mobile");
     @include screenSize($size: 768px) {
       max-width: map.get($elementSize, "photo");
+    }
+    @include screenSize($size: 1440px) {
+      margin-right: 80px;
     }
   }
   &__img {
@@ -74,12 +88,19 @@
     padding-bottom: 30px;
   }
   &__image {
+    max-width: map.get($elementSize, "mobile");
     padding-bottom: 20px;
     padding-top: 50px;
     @include screenSize($size: 768px) {
       align-self: flex-end;
       padding-right: 50px;
       padding-top: 140px;
+      max-width: map.get($elementSize, "photo");
+
+    }
+    @include screenSize($size: 1440px) {
+    padding-right: 160px;
+    padding-top: 110px;
 
     }
   }

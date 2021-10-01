@@ -10,10 +10,14 @@
     padding-right: 6.5%;
     padding-top: 30px;
     width: 87%;
-    @include screenSize($size: 768px) {
-      display: grid;
-      grid-template-columns: 484px 184px;
-    }
+    display: grid;
+    grid-template-columns: 1fr 184px;
+  }
+  @include screenSize($size: 1440px) {
+    padding-left: 11.1%;
+    padding-right: 11.1%;
+    width: 77.8%;
+    grid-template-columns: 1fr 218px;
   }
   &::before {
     content: "";
@@ -24,10 +28,13 @@
     background-image: url(../images/figure.svg);
     @include screenSize($size: 768px) {
       top: 26px;
-      left: 50px;
+      left: 6.5%;
       @include wh($w: 38px, $h: 54px);
       background-repeat: no-repeat;
       background-size: cover;
+    }
+    @include screenSize($size: 1440px) {
+      left: 11.1%;
     }
   }
   &::after {
@@ -41,7 +48,12 @@
       @include wh($w: 130px, $h: 520px);
       background-image: url(../images/tablet-header-back.svg);
       top: 300px;
-      right: 0;
+      right: 0%;
+    }
+    @include screenSize($size: 1440px) {
+      background-image: url(../images/desktop-header-back.svg);
+      top: 150px;
+      @include wh($w: 480px, $h: 640px);
     }
   }
   &__button {
@@ -50,6 +62,10 @@
       grid-column-start: 2;
       font-size: 13px;
       @include wh($w: 184px, $h: 44px);
+    }
+    @include screenSize($size: 1440px) {
+      @include wh($w: 218px, $h: 48px);
+      font-size: 15px;
     }
   }
   &__club {
@@ -66,6 +82,9 @@
       @include wh($w: 84px, $h: 50px);
       margin-top: 66px;
       margin-bottom: 70px;
+    }
+    @include screenSize($size: 1440px) {
+      margin-top: 62px;
     }
   }
   &__club-text {
@@ -87,7 +106,7 @@
       font-size: 70px;
       line-height: 90%;
       padding-bottom: 40px;
-max-width: 500px;
+      max-width: 500px;
     }
   }
   &__subtitle {
@@ -101,7 +120,9 @@ max-width: 500px;
       line-height: 130%;
       padding-bottom: 212px;
       max-width: 500px;
-
+    }
+    @include screenSize($size: 1440px) {
+      padding-bottom: 182px;
     }
   }
   &__image {
@@ -109,6 +130,10 @@ max-width: 500px;
     @include screenSize($size: 768px) {
       grid-column-start: 1;
       max-width: 416px;
+      padding-bottom: 50px;
+    }
+    @include screenSize($size: 1440px) {
+      padding-bottom: 80px;
     }
   }
   &__invite {

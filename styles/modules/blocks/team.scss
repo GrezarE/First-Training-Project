@@ -10,6 +10,9 @@
     padding-left: 50px;
     overflow: hidden;
   }
+  @include screenSize($size: 1440px) {
+    padding-left: 160px;
+  }
 
   &__header {
     max-width: map.get($elementSize, "mobile");
@@ -23,6 +26,9 @@
       padding-top: 50px;
       padding-bottom: 40px;
     }
+    @include screenSize($size: 1440px) {
+      padding-top: 80px;
+    }
   }
   &__text {
     @include reset-brouser;
@@ -33,6 +39,9 @@
       font-size: 20px;
       max-width: map.get($elementSize, "tablet");
       padding-bottom: 140px;
+    }
+    @include screenSize($size: 1440px) {
+      padding-bottom: 110px;
     }
   }
   &__cards {
@@ -49,16 +58,18 @@
     @include screenSize($size: 768px) {
       max-width: map.get($elementSize, "photo");
     }
+    @include screenSize($size: 1440px) {
+      margin-right: 80px;
+    }
   }
   &__person {
     @include flex;
     @include screenSize($size: 768px) {
-    align-items: flex-start;
+      align-items: flex-start;
     }
   }
   &__photo {
     max-width: map.get($elementSize, "mobile");
-    // margin-right: 28px;
     @include screenSize($size: 768px) {
       max-width: map.get($elementSize, "photo");
     }
@@ -71,9 +82,9 @@
     // text-align: center;
     text-transform: uppercase;
     @include screenSize($size: 768px) {
-    font-size: 22px;
-    padding-top: 30px;
-    padding-bottom: 10px;
+      font-size: 22px;
+      padding-top: 30px;
+      padding-bottom: 10px;
     }
   }
   &__occupation {
@@ -84,7 +95,6 @@
     @include screenSize($size: 768px) {
       font-size: 20px;
       padding-bottom: 50px;
-
     }
   }
   &__slide {
