@@ -31,6 +31,12 @@ function closePopup(popup) {
 headerButton.addEventListener('click', function () {openPopup(popupModale)});
 footerButton.addEventListener('click', function () {openPopup(popupModale)});
 
+function registration(evt) {
+  evt.preventDefault();
+  closePopup(popupModale);
+}
 
-const width = document.documentElement.clientWidth
-console.log(width)
+popubButton.addEventListener('click', registration)
+
+// const width = document.documentElement.clientWidth
+// console.log(width)
