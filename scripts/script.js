@@ -1,8 +1,36 @@
+//Slider Start
+
 var swiper = new Swiper(".mySwiper", {
+  watchOverflow: true,
   pagination: {
     el: ".swiper-pagination",
   },
+  // breakpoints: {
+  //   320: {
+  //     slidesPerView: 1,
+  //   },
+  //   1440: {
+  //     slidesPerView: "auto",
+  //   },
+  // },
+  // on: {
+  //   init: function() {
+  //     toggleWidth();
+  //   },
+  //   resize: function() {
+  //     toggleWidth();
+  //   },
+  // },
 });
+
+// swiper.init();
+
+// function toggleWidth(e) {
+//   const fieldValueWidth = document.querySelector(".valueWidth");
+//   fieldValueWidth.innerText = window.innerWidth + " px";
+// }
+
+// Slider End
 
 const popupModale = document.querySelector('.popup');
 const button = document.querySelector('.button');
