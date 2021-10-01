@@ -667,25 +667,23 @@
   padding: 0;
   list-style: none;
   max-width: 280px;
+  margin-right: 28px;
 }
 @media (min-width: 768px) {
   .battle__photo-box {
     max-width: 320px;
   }
 }
-.battle__photo {
-  margin-right: 28px;
-  max-width: 280px;
-}
-@media (min-width: 768px) {
-  .battle__photo {
-    max-width: 320px;
-  }
-}
 @media (min-width: 1440px) {
-  .battle__photo {
+  .battle__photo-box {
     margin-right: 80px;
   }
+}
+.battle__photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .battle__img {
   max-width: 280px;

@@ -17,7 +17,6 @@
       background-image: url(../images/desktop-battle-back.svg);
       background-position: 100px bottom;
       background-size: 440px;
-
     }
   }
   &__header {
@@ -66,19 +65,16 @@
     @include reset-brouser;
     list-style: none;
     max-width: map.get($elementSize, "mobile");
-    @include screenSize($size: 768px) {
-      max-width: map.get($elementSize, "photo");
-    }
-  }
-  &__photo {
     margin-right: 28px;
-    max-width: map.get($elementSize, "mobile");
     @include screenSize($size: 768px) {
       max-width: map.get($elementSize, "photo");
     }
     @include screenSize($size: 1440px) {
       margin-right: 80px;
     }
+  }
+  &__photo {
+    @include flex;
   }
   &__img {
     max-width: map.get($elementSize, "mobile");
@@ -96,12 +92,10 @@
       padding-right: 50px;
       padding-top: 140px;
       max-width: map.get($elementSize, "photo");
-
     }
     @include screenSize($size: 1440px) {
-    padding-right: 160px;
-    padding-top: 110px;
-
+      padding-right: 160px;
+      padding-top: 110px;
     }
   }
   &__slide {
